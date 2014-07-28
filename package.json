@@ -1,0 +1,32 @@
+{
+  "name": "firefoxdriver",
+  "version": "0.1.0",
+  "description": "Driver for interfacing the Marionette testing protocol with Webdriver",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dalekjs/firefoxdriver.git"
+  },
+  "keywords": [
+    "firefox",
+    "webdriver",
+    "marionette"
+  ],
+  "author": "Sebastian Golasch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dalekjs/firefoxdriver/issues"
+  },
+  "homepage": "https://github.com/dalekjs/firefoxdriver",
+  "dependencies": {
+    "empty-port": "0.0.1",
+    "hapi": "^6.2.1",
+    "marionette-client": "^1.1.8",
+    "marionette-firefox-host": "0.0.2",
+    "marionette-profile-builder": "0.0.3",
+    "q": "^1.0.1"
+  }
+}
