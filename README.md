@@ -117,6 +117,21 @@ Driver for interfacing the Marionette testing protocol with Webdriver
 
 [GET /session/:sessionId/orientation](https://code.google.com/p/selenium/wiki/JsonWireProtocol#GET_/session/:sessionId/orientation)
 
+[/session/:sessionId/location](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/location) -> needs some settings in the profile to get around security restriction (until then, it does only work when the location has been set before from Dalek)
+
+[/session/:sessionId/local_storage](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/local_storage)
+
+[/session/:sessionId/local_storage/key/:key](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/local_storage/key/:key)
+
+[/session/:sessionId/local_storage/size](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/local_storage/size)
+
+[/session/:sessionId/session_storage](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/session_storage)
+
+[/session/:sessionId/session_storage/key/:key](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/session_storage/key/:key)
+
+[/session/:sessionId/session_storage/size](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/session_storage/size)
+
+
 # Unsupported
 [POST /session/:sessionId/window/:windowHandle/position](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/window/:windowHandle/position) - probably solvable using a dynamically injected plugin -> http://mozilla-b2g.github.io/marionette-js-client/api-docs/classes/Marionette.Client.html#method_plugin
 
