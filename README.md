@@ -58,7 +58,12 @@ Driver for interfacing the Marionette testing protocol with Webdriver
 
 [DELETE /session/:sessionId/window](https://code.google.com/p/selenium/wiki/JsonWireProtocol#DELETE_/session/:sessionId/window)
 
+[POST /session/:sessionId/window/:windowHandle/maximize](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/window/:windowHandle/maximize) -> with workaround
+
 [GET /session/:sessionId/window/:windowHandle/size](https://code.google.com/p/selenium/wiki/JsonWireProtocol#GET_/session/:sessionId/window/:windowHandle/size) - only works for the current window handle atm.
+
+[POST /session/:sessionId/window/:windowHandle/size](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/window/:windowHandle/size) -> with workaround
+
 
 [GET /session/:sessionId/window/:windowHandle/position](https://code.google.com/p/selenium/wiki/JsonWireProtocol#GET_/session/:sessionId/window/:windowHandle/position) - only works for the current window handle atm.
 
@@ -72,12 +77,50 @@ Driver for interfacing the Marionette testing protocol with Webdriver
 
 [/session/:sessionId/title](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/title)
 
-# Unsupported
-[POST /session/:sessionId/window/:windowHandle/size](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/window/:windowHandle/size) - probably solvable using a dynamically injected plugin -> http://mozilla-b2g.github.io/marionette-js-client/api-docs/classes/Marionette.Client.html#method_plugin
+[/session/:sessionId/element](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/element)
 
+[/session/:sessionId/elements](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/elements)
+
+[/session/:sessionId/element/active](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/element/active)
+
+[/session/:sessionId/element/:id/element](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/element)
+
+[/session/:sessionId/element/:id/elements](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/elements)
+
+[/session/:sessionId/element/:id/click](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/element/:id/click)
+
+[/session/:sessionId/element/:id/submit](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/submit)
+
+[/session/:sessionId/element/:id/text](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/text)
+
+[/session/:sessionId/element/:id/value](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/value)
+
+[/session/:sessionId/keys](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/keys)
+
+[/session/:sessionId/element/:id/clear](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/clear)
+
+[/session/:sessionId/element/:id/selected](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/selected)
+
+[/session/:sessionId/element/:id/enabled](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/enabled)
+
+[/session/:sessionId/element/:id/attribute/:name](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/attribute/:name)
+
+[/session/:sessionId/element/:id/equals/:other](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/equals/:other)
+
+[/session/:sessionId/element/:id/displayed](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/displayed)
+
+[/session/:sessionId/element/:id/location](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/location)
+
+[/session/:sessionId/element/:id/size](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/size)
+
+[/session/:sessionId/element/:id/css/:propertyName](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id/css/:propertyName)
+
+[GET /session/:sessionId/orientation](https://code.google.com/p/selenium/wiki/JsonWireProtocol#GET_/session/:sessionId/orientation)
+
+# Unsupported
 [POST /session/:sessionId/window/:windowHandle/position](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/window/:windowHandle/position) - probably solvable using a dynamically injected plugin -> http://mozilla-b2g.github.io/marionette-js-client/api-docs/classes/Marionette.Client.html#method_plugin
 
-[POST /session/:sessionId/window/:windowHandle/maximize](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/window/:windowHandle/maximize) - probably solvable using a dynamically injected plugin -> http://mozilla-b2g.github.io/marionette-js-client/api-docs/classes/Marionette.Client.html#method_plugin
+ - probably solvable using a dynamically injected plugin -> http://mozilla-b2g.github.io/marionette-js-client/api-docs/classes/Marionette.Client.html#method_plugin
 
 [GET /session/:sessionId/cookie](https://code.google.com/p/selenium/wiki/JsonWireProtocol#GET_/session/:sessionId/cookie) -> Probably Polyfillable using JavaScript (at least to some degree)
 
@@ -86,3 +129,45 @@ Driver for interfacing the Marionette testing protocol with Webdriver
 [DELETE /session/:sessionId/cookie](https://code.google.com/p/selenium/wiki/JsonWireProtocol#DELETE_/session/:sessionId/cookie) -> Probably Polyfillable using JavaScript (at least to some degree)
 
 [DELETE /session/:sessionId/cookie/:name](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/cookie/:name) -> Probably Polyfillable using JavaScript (at least to some degree)
+
+[GET session/:sessionId/element/:id](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/element/:id) -> not yet specified in the spec
+
+[GET /session/:sessionId/element/:id/location_in_view](https://code.google.com/p/selenium/wiki/JsonWireProtocol#GET_/session/:sessionId/element/:id/location_in_view) -> could be mocked by using clientside executed javascript
+
+[POST /session/:sessionId/orientation](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/orientation)
+
+[GET /session/:sessionId/alert_text](https://code.google.com/p/selenium/wiki/JsonWireProtocol#GET_/session/:sessionId/alert_text)
+-> maybe override the alert() & dialog() methods in JS
+
+[POST /session/:sessionId/alert_text](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/alert_text)
+-> maybe override the alert() & dialog() methods in JS
+
+[POST /session/:sessionId/accept_alert](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/accept_alert)
+-> maybe override the alert() & dialog() methods in JS
+
+[POST /session/:sessionId/dismiss_alert](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/dismiss_alert)
+-> maybe override the alert() & dialog() methods in JS
+
+[POST /session/:sessionId/moveto](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/moveto) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/buttonup](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/buttonup) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/buttondown](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/buttondown) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/doubleclick](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/doubleclick) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/touch/click](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/touch/click) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/touch/down](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/touch/down) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/touch/up](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/touch/up) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/touch/move](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/touch/move) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/touch/scroll](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/touch/scroll) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/touch/doubleclick](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/touch/doubleclick) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/touch/longclick](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/touch/longclick) -> No way to control the mouse cursor
+
+[POST /session/:sessionId/touch/flick](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/touch/flick) -> Probably pollyfillable with client side scrolling
