@@ -131,6 +131,11 @@ Driver for interfacing the Marionette testing protocol with Webdriver
 
 [/session/:sessionId/session_storage/size](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/session_storage/size)
 
+[/session/:sessionId/log](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/log)
+
+[/session/:sessionId/log/types](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/log/types)
+
+[/session/:sessionId/application_cache/status](https://code.google.com/p/selenium/wiki/JsonWireProtocol#/session/:sessionId/application_cache/status)
 
 # Unsupported
 [POST /session/:sessionId/window/:windowHandle/position](https://code.google.com/p/selenium/wiki/JsonWireProtocol#POST_/session/:sessionId/window/:windowHandle/position) - probably solvable using a dynamically injected plugin -> http://mozilla-b2g.github.io/marionette-js-client/api-docs/classes/Marionette.Client.html#method_plugin
