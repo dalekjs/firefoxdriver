@@ -27,6 +27,7 @@
     "marionette-client": "^1.1.8",
     "marionette-firefox-host": "0.0.2",
     "marionette-profile-builder": "0.0.3",
-    "q": "^1.0.1"
+    "q": "^1.0.1",
+    "which": "^1.0.5"
   }
 }
